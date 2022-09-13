@@ -22,19 +22,36 @@ int main(int argc, char** argv )
     }
 
     std::string fileType;
+    int fileTypeInt;
+    fileTypeInt = fileInfo.st_mode;
     fileType = fileInfo.st_mode;
 
-    // if ((fileInfo.st_mode & S_IFMT) == S_IFDIR) { // From sys/types.h
-    //     fileType = "Directory\n";
-    // }
-    // else {
-    //     fileType = "File\n";
-    // }
-
-    // struct passwd *pwd;
-    // std::string name;
-    // pwd = getpwuid(fileInfo.st_uid);
-
+    if ((fileTypeInt & S_IFMT) == S_IFREG) {
+        fileType = "Regular file";
+    }
+    else if ((fileTypeInt & S_IFMT) == S_IFDIR) {
+        fileType = "Directory";
+    }
+    else if ((fileTypeInt & S_IFMT) == S_IFCHR)
+    {
+        fileType = "Character device";
+    }
+    else if ((fileTypeInt & S_IFMT) == S_IFBLK)
+    {
+        fileType = "Block device";
+    }
+    else if ((fileTypeInt & S_IFMT) == S_IFIFO)
+    {
+        fileType = "FIFO";
+    }
+    else if ((fileTypeInt & S_IFMT) == S_IFLNK)
+    {
+        fileType = "Symbolic link";
+    }
+    else if ((fileTypeInt & S_IFMT) == S_IFSOCK)
+    {
+        fileType = "Socket";
+    }
 
     struct passwd *pws;
     pws = getpwuid(fileInfo.st_uid);
@@ -42,7 +59,7 @@ int main(int argc, char** argv )
 
    
     std::cout << "Inode number   : " << fileInfo.st_ino << '\n';                // Inode number
-    std::cout << "File type      : " << "temp" << '\n';                               // File Type
+    std::cout << "File type      : " << fileType << '\n';                               // File Type
     std::cout << "User Name      : " << userName << '\n' ;                                  // User Name
     std::cout << "Size           : " << fileInfo.st_size << '\n';               // Size in bytes
     std::cout << "Modified       : " << std::ctime(&fileInfo.st_mtime);         // Last mod time IMPORTANT HERE
