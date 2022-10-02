@@ -1,5 +1,5 @@
 # CPSC380_22_ASSIGNMENT3_SIDDIQUI
-Programming Assignment 3
+Programming Assignment 3\
 Arman Siddiqui - 2390583
 
 # Program:
@@ -13,4 +13,6 @@ Online sources such as Geeks for Geeks and StackOverflow were used to help under
 The most useful source was the pthreads tutorial on Geeks for Geeks as it not only illustrated how to approach the assignment but also explained what the underlying code was doing.
 
 # Notes:
-To use this program, simply go into thrsort.cpp and change the array size defined as MAX and the array you want to use. You may also follow the comments to create a random array if you choose. Then, compile the program using "g++ -o thrsort thrsort.cpp" and run with "./thrsort". The program will then sort the array and print the sorted array to the console along with the time it took to sort the array. 
+To use this program, simply go into thrsort.cpp and change the array size defined as MAX and the array you want to use. You may also follow the comments to create a random array if you choose. Then, compile the program using "g++ -o thrsort thrsort.cpp" and run with "./thrsort". The program will then sort the array and print the sorted array to the console along with the time it took to sort the array.
+
+The program will run as uploaded with 2 threads on a given array of integers already defined in the code.
