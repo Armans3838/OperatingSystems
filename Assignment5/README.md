@@ -3,7 +3,7 @@ Arman Siddiqui
 
 # Sources/Help
 For this assignment, I used the following resources:
-- Lucus helped me work through this assingment, hence the similarity in our submissions
+- Lucus and Sophie helped me work through this assingment, hence the similarity in our submissions
 - GitHub CoPilot helped with all of this assignment in terms of the syntax and logic. The code was of course conceptualized by myself and Lucus, but the syntax was aided by CoPilot
 - GeeksforGeeks offered lots of insight into how to acutally use the shared memory and semaphores.
 
