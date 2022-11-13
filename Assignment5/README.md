@@ -20,3 +20,6 @@ Run the program using the following command:
 ```
 ./prodcon <nitems>
 ```
+
+# Known Issues:
+The biggest issue is that any number of parameters above 1 results in the checksum's no longer matching. This is something I would like to have resolved, but I am not sure how to do so. I believe it has something to do with the way I am using the semaphores, but I am not sure how to fix it.
